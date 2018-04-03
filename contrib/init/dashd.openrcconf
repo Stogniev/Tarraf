@@ -1,0 +1,33 @@
+# /etc/conf.d/TRFd: config file for /etc/init.d/TRFd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/TRFcore/TRF.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/TRFd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/TRFd.pid"
+
+# Where to write TRFd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/TRFd"
+
+# User and group to own TRFd process
+#BITCOIND_USER="TRFcore"
+#BITCOIND_GROUP="TRFcore"
+
+# Path to TRFd executable
+#BITCOIND_BIN="/usr/bin/TRFd"
+
+# Nice value to run TRFd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=TRF
+Comment=TRF P2P Cryptocurrency
+Comment[fr]=TRF, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=TRF, eşten eşe kriptografik sanal para birimi
+Exec=TRF-qt %u
+Terminal=false
+Type=Application
+Icon=TRF128
+MimeType=x-scheme-handler/TRF;
+Categories=Office;Finance;

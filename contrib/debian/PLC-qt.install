@@ -1,0 +1,6 @@
+usr/local/bin/TRF-qt usr/bin
+share/pixmaps/TRF32.xpm usr/share/pixmaps
+share/pixmaps/TRF16.xpm usr/share/pixmaps
+share/pixmaps/TRF128.png usr/share/pixmaps
+debian/TRF-qt.desktop usr/share/applications
+debian/TRF-qt.protocol usr/share/kde4/services/
