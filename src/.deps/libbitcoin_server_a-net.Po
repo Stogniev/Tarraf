@@ -1140,7 +1140,14 @@ libbitcoin_server_a-net.o: net.cpp /usr/include/stdc-predef.h \
  /usr/include/boost/unordered/unordered_map_fwd.hpp script/script_error.h \
  versionbits.h spentindex.h spork.h instantx.h masternode-sync.h \
  univalue/include/univalue.h masternodeman.h \
- /usr/include/boost/filesystem.hpp \
+ /usr/include/miniupnpc/miniupnpc.h /usr/include/miniupnpc/declspec.h \
+ /usr/include/miniupnpc/igd_desc_parse.h \
+ /usr/include/miniupnpc/miniwget.h /usr/include/miniupnpc/upnpcommands.h \
+ /usr/include/miniupnpc/upnpreplyparse.h \
+ /usr/include/x86_64-linux-gnu/sys/queue.h \
+ /usr/include/miniupnpc/portlistingparse.h \
+ /usr/include/miniupnpc/miniupnpctypes.h \
+ /usr/include/miniupnpc/upnperrors.h /usr/include/boost/filesystem.hpp \
  /usr/include/boost/filesystem/operations.hpp \
  /usr/include/boost/detail/scoped_enum_emulation.hpp \
  /usr/include/boost/detail/bitmask.hpp /usr/include/c++/5/stack \
@@ -3854,6 +3861,26 @@ masternode-sync.h:
 univalue/include/univalue.h:
 
 masternodeman.h:
+
+/usr/include/miniupnpc/miniupnpc.h:
+
+/usr/include/miniupnpc/declspec.h:
+
+/usr/include/miniupnpc/igd_desc_parse.h:
+
+/usr/include/miniupnpc/miniwget.h:
+
+/usr/include/miniupnpc/upnpcommands.h:
+
+/usr/include/miniupnpc/upnpreplyparse.h:
+
+/usr/include/x86_64-linux-gnu/sys/queue.h:
+
+/usr/include/miniupnpc/portlistingparse.h:
+
+/usr/include/miniupnpc/miniupnpctypes.h:
+
+/usr/include/miniupnpc/upnperrors.h:
 
 /usr/include/boost/filesystem.hpp:
 

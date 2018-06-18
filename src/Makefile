@@ -92,7 +92,7 @@ build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
 am__append_1 = $(BDB_CPPFLAGS)
 am__append_2 = libbitcoin_wallet.a
-#am__append_3 = libbitcoin_zmq.a
+am__append_3 = libbitcoin_zmq.a
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 	$(am__EXEEXT_4) $(am__EXEEXT_5) $(am__EXEEXT_6)
 TESTS = $(am__EXEEXT_3) $(am__EXEEXT_6)
@@ -100,7 +100,7 @@ am__append_4 = TRFd
 am__append_5 = TRF-cli TRF-tx
 #am__append_6 = compat/glibc_compat.cpp
 #am__append_7 = TRFd-res.rc
-#am__append_8 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+am__append_8 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_9 = libbitcoin_wallet.a
 #am__append_10 = TRF-cli-res.rc
 #am__append_11 = TRF-tx-res.rc
@@ -139,10 +139,10 @@ am__append_24 = \
   test/rpc_wallet_tests.cpp
 
 am__append_25 = $(LIBBITCOIN_WALLET)
-#am__append_26 = $(ZMQ_LIBS)
+am__append_26 = $(ZMQ_LIBS)
 am__append_27 = $(CLEAN_BITCOIN_TEST)
 am__append_28 = bench/bench_TRF
-#am__append_29 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+am__append_29 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_30 = $(LIBBITCOIN_WALLET)
 am__append_31 = $(CLEAN_BITCOIN_BENCH)
 am__append_32 = qt/TRF-qt
@@ -181,7 +181,7 @@ am__append_35 = \
 #am__append_36 = $(BITCOIN_MM)
 #am__append_37 = $(BITCOIN_RC)
 am__append_38 = $(LIBBITCOIN_WALLET)
-#am__append_39 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+am__append_39 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_40 = $(CLEAN_QT)
 am__append_41 = qt/test/test_TRF-qt
 am__append_42 = qt/test/test_TRF-qt
@@ -190,7 +190,7 @@ am__append_44 = \
   qt/test/paymentservertests.cpp
 
 am__append_45 = $(LIBBITCOIN_WALLET)
-#am__append_46 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+am__append_46 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_47 = $(CLEAN_BITCOIN_QT_TEST)
 subdir = src
 SUBDIRS =
@@ -490,9 +490,9 @@ libbitcoin_zmq_a_AR = $(AR) $(ARFLAGS)
 libbitcoin_zmq_a_LIBADD =
 am__libbitcoin_zmq_a_SOURCES_DIST = zmq/zmqabstractnotifier.cpp \
 	zmq/zmqnotificationinterface.cpp zmq/zmqpublishnotifier.cpp
-#am_libbitcoin_zmq_a_OBJECTS = zmq/libbitcoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
-#	zmq/libbitcoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
-#	zmq/libbitcoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
+am_libbitcoin_zmq_a_OBJECTS = zmq/libbitcoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
+	zmq/libbitcoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
+	zmq/libbitcoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
 libbitcoin_zmq_a_OBJECTS = $(am_libbitcoin_zmq_a_OBJECTS)
 qt_libbitcoinqt_a_AR = $(AR) $(ARFLAGS)
 qt_libbitcoinqt_a_LIBADD =
@@ -978,8 +978,8 @@ am_TRFd_OBJECTS = TRFd-TRFd.$(OBJEXT) $(am__objects_15)
 TRFd_OBJECTS = $(am_TRFd_OBJECTS)
 am__DEPENDENCIES_2 = $(am__append_14)
 am__DEPENDENCIES_3 = $(am__append_15)
-#am__DEPENDENCIES_4 = $(LIBBITCOIN_ZMQ) \
-#	$(am__DEPENDENCIES_1)
+am__DEPENDENCIES_4 = $(LIBBITCOIN_ZMQ) \
+	$(am__DEPENDENCIES_1)
 TRFd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBUNIVALUE) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
 	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3) $(LIBSECP256K1) \
@@ -997,9 +997,9 @@ am_bench_bench_TRF_OBJECTS =  \
 	bench/bench_bench_TRF-bench.$(OBJEXT) \
 	bench/bench_bench_TRF-Examples.$(OBJEXT)
 bench_bench_TRF_OBJECTS = $(am_bench_bench_TRF_OBJECTS)
-#am__DEPENDENCIES_5 =  \
-#	$(LIBBITCOIN_ZMQ) \
-#	$(am__DEPENDENCIES_1)
+am__DEPENDENCIES_5 =  \
+	$(LIBBITCOIN_ZMQ) \
+	$(am__DEPENDENCIES_1)
 bench_bench_TRF_DEPENDENCIES =  \
 	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
@@ -1026,9 +1026,9 @@ am__objects_18 = qt/res/TRF-qt-res.$(OBJEXT)
 am_qt_TRF_qt_OBJECTS = qt/qt_TRF_qt-TRF.$(OBJEXT) \
 	$(am__objects_17) $(am__objects_19)
 qt_TRF_qt_OBJECTS = $(am_qt_TRF_qt_OBJECTS)
-#am__DEPENDENCIES_6 =  \
-#	$(LIBBITCOIN_ZMQ) \
-#	$(am__DEPENDENCIES_1)
+am__DEPENDENCIES_6 =  \
+	$(LIBBITCOIN_ZMQ) \
+	$(am__DEPENDENCIES_1)
 qt_TRF_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_38) \
 	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
@@ -1062,9 +1062,9 @@ nodist_qt_test_test_TRF_qt_OBJECTS =  \
 	$(am__objects_22)
 qt_test_test_TRF_qt_OBJECTS = $(am_qt_test_test_TRF_qt_OBJECTS) \
 	$(nodist_qt_test_test_TRF_qt_OBJECTS)
-#am__DEPENDENCIES_7 =  \
-#	$(LIBBITCOIN_ZMQ) \
-#	$(am__DEPENDENCIES_1)
+am__DEPENDENCIES_7 =  \
+	$(LIBBITCOIN_ZMQ) \
+	$(am__DEPENDENCIES_1)
 qt_test_test_TRF_qt_DEPENDENCIES =  \
 	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
 	$(am__append_45) $(am__DEPENDENCIES_7) \
@@ -1188,8 +1188,8 @@ nodist_test_test_TRF_OBJECTS = $(am__objects_25)
 test_test_TRF_OBJECTS = $(am_test_test_TRF_OBJECTS) \
 	$(nodist_test_test_TRF_OBJECTS)
 am__DEPENDENCIES_8 = libbitcoinconsensus.la
-#am__DEPENDENCIES_9 =  \
-#	$(am__DEPENDENCIES_1)
+am__DEPENDENCIES_9 =  \
+	$(am__DEPENDENCIES_1)
 test_test_TRF_DEPENDENCIES = $(LIBBITCOIN_SERVER) \
 	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
@@ -1554,14 +1554,14 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /home/serverius/test3/TRF/build-aux/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/catfromhell/Work/Tarraf/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
-AUTOCONF = ${SHELL} /home/serverius/test3/TRF/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/serverius/test3/TRF/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/serverius/test3/TRF/build-aux/missing automake-1.15
-AWK = gawk
+AUTOCONF = ${SHELL} /home/catfromhell/Work/Tarraf/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/catfromhell/Work/Tarraf/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/catfromhell/Work/Tarraf/build-aux/missing automake-1.15
+AWK = mawk
 BDB_CPPFLAGS = 
 BDB_LIBS = -ldb_cxx-4.8
 BOOST_CHRONO_LIB = -lboost_chrono
@@ -1626,7 +1626,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-JAVA = 
+JAVA = /usr/bin/java
 JAVA_COMPARISON_TOOL = 
 LCOV = 
 LD = /usr/bin/ld -m elf_x86_64
@@ -1643,18 +1643,18 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOL_APP_LDFLAGS = 
 LIPO = 
 LN_S = ln -s
-LRELEASE = /usr/lib/x86_64-linux-gnu/qt5/bin/lrelease
+LRELEASE = /usr/lib/qt5/bin/lrelease
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-LUPDATE = /usr/lib/x86_64-linux-gnu/qt5/bin/lupdate
+LUPDATE = /usr/lib/qt5/bin/lupdate
 MAINT = 
-MAKEINFO = ${SHELL} /home/serverius/test3/TRF/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/catfromhell/Work/Tarraf/build-aux/missing makeinfo
 MAKENSIS = 
 MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = 
-MINIUPNPC_LIBS = 
+MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /bin/mkdir -p
-MOC = /usr/lib/x86_64-linux-gnu/qt5/bin/moc
+MOC = /usr/lib/qt5/bin/moc
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
 NM = /usr/bin/nm -B
 NMEDIT = 
@@ -1687,28 +1687,28 @@ PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
 PYTHON = /usr/bin/python
 QR_CFLAGS = 
-QR_LIBS = 
+QR_LIBS = -lqrencode
 QTPLATFORM_CFLAGS = 
 QTPLATFORM_LIBS = 
 QTPRINT_CFLAGS = 
 QTPRINT_LIBS = 
 QTXCBQPA_CFLAGS = 
 QTXCBQPA_LIBS = 
-QT_CFLAGS = -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
-QT_DBUS_CFLAGS = -I/usr/include/x86_64-linux-gnu/qt5/QtDBus -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
-QT_DBUS_INCLUDES = -I/usr/include/x86_64-linux-gnu/qt5/QtDBus -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+QT_CFLAGS = -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+QT_DBUS_CFLAGS = -DQT_DBUS_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtDBus -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+QT_DBUS_INCLUDES = -DQT_DBUS_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtDBus -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
 QT_DBUS_LIBS = -lQt5DBus -lQt5Core
-QT_INCLUDES = -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+QT_INCLUDES = -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
 QT_LDFLAGS = 
 QT_LIBS = -lQt5Network -lQt5Widgets -lQt5Gui -lQt5Core
 QT_PIE_FLAGS = -fPIC
 QT_SELECT = qt5
-QT_TEST_CFLAGS = -I/usr/include/x86_64-linux-gnu/qt5/QtTest -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
-QT_TEST_INCLUDES = -I/usr/include/x86_64-linux-gnu/qt5/QtTest -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+QT_TEST_CFLAGS = -DQT_TESTLIB_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtTest -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+QT_TEST_INCLUDES = -DQT_TESTLIB_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtTest -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
 QT_TEST_LIBS = -lQt5Test -lQt5Core
 QT_TRANSLATION_DIR = 
 RANLIB = /usr/bin/ranlib
-RCC = /usr/lib/x86_64-linux-gnu/qt5/bin/rcc
+RCC = /usr/lib/qt5/bin/rcc
 READELF = /usr/bin/readelf
 RELDFLAGS = 
 SED = /bin/sed
@@ -1718,7 +1718,7 @@ SSL_CFLAGS =
 SSL_LIBS = -lssl
 STRIP = /usr/bin/strip
 TESTDEFS =  -DBOOST_TEST_DYN_LINK
-UIC = /usr/lib/x86_64-linux-gnu/qt5/bin/uic
+UIC = /usr/lib/qt5/bin/uic
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 0.12.1
@@ -1726,13 +1726,13 @@ WINDOWS_BITS =
 WINDRES = 
 X11XCB_CFLAGS = 
 X11XCB_LIBS = 
-XGETTEXT = 
+XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
-ZMQ_LIBS = 
-abs_builddir = /home/serverius/test3/TRF/src
-abs_srcdir = /home/serverius/test3/TRF/src
-abs_top_builddir = /home/serverius/test3/TRF
-abs_top_srcdir = /home/serverius/test3/TRF
+ZMQ_LIBS = -lzmq
+abs_builddir = /home/catfromhell/Work/Tarraf/src
+abs_srcdir = /home/catfromhell/Work/Tarraf/src
+abs_top_builddir = /home/catfromhell/Work/Tarraf
+abs_top_srcdir = /home/catfromhell/Work/Tarraf
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -1764,7 +1764,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/serverius/test3/TRF/build-aux/install-sh
+install_sh = ${SHELL} /home/catfromhell/Work/Tarraf/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -1983,13 +1983,13 @@ libbitcoin_server_a_SOURCES = \
   versionbits.cpp \
   $(BITCOIN_CORE_H)
 
-#LIBBITCOIN_ZMQ = libbitcoin_zmq.a
-#libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-#libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-#libbitcoin_zmq_a_SOURCES = \
-#  zmq/zmqabstractnotifier.cpp \
-#  zmq/zmqnotificationinterface.cpp \
-#  zmq/zmqpublishnotifier.cpp
+LIBBITCOIN_ZMQ = libbitcoin_zmq.a
+libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_zmq_a_SOURCES = \
+  zmq/zmqabstractnotifier.cpp \
+  zmq/zmqnotificationinterface.cpp \
+  zmq/zmqpublishnotifier.cpp
 
 
 # wallet: shared between TRFd and TRF-qt, but only linked

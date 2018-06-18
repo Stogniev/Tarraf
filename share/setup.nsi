@@ -10,11 +10,11 @@ SetCompressor /SOLID lzma
 !define URL https://www.TRF.org/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/serverius/test3/TRF/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/serverius/test3/TRF/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/catfromhell/Work/Tarraf/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/catfromhell/Work/Tarraf/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/serverius/test3/TRF/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/catfromhell/Work/Tarraf/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,7 +22,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "TRF Core"
 !define MUI_FINISHPAGE_RUN $INSTDIR\TRF-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/serverius/test3/TRF/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/catfromhell/Work/Tarraf/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,7 +48,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/serverius/test3/TRF/TRFcore-${VERSION}-win-setup.exe
+OutFile /home/catfromhell/Work/Tarraf/TRFcore-${VERSION}-win-setup.exe
 !if "" == "64"
 InstallDir $PROGRAMFILES64\TRFCore
 !else
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/serverius/test3/TRF/release/TRF-qt.exe
-    File /oname=COPYING.txt /home/serverius/test3/TRF/COPYING
-    File /oname=readme.txt /home/serverius/test3/TRF/doc/README_windows.txt
+    File /home/catfromhell/Work/Tarraf/release/TRF-qt.exe
+    File /oname=COPYING.txt /home/catfromhell/Work/Tarraf/COPYING
+    File /oname=readme.txt /home/catfromhell/Work/Tarraf/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/serverius/test3/TRF/release/TRFd.exe
-    File /home/serverius/test3/TRF/release/TRF-cli.exe
+    File /home/catfromhell/Work/Tarraf/release/TRFd.exe
+    File /home/catfromhell/Work/Tarraf/release/TRF-cli.exe
     SetOutPath $INSTDIR\doc
-    File /r /home/serverius/test3/TRF/doc\*.*
+    File /r /home/catfromhell/Work/Tarraf/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 

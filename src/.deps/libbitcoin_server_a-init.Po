@@ -1450,7 +1450,7 @@ libbitcoin_server_a-init.o: init.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
  /usr/include/openssl/stack.h /usr/include/openssl/safestack.h \
  /usr/include/openssl/opensslv.h /usr/include/openssl/ossl_typ.h \
- /usr/include/openssl/symhacks.h
+ /usr/include/openssl/symhacks.h zmq/zmqnotificationinterface.h
 
 /usr/include/stdc-predef.h:
 
@@ -4869,3 +4869,5 @@ masternodeconfig.h:
 /usr/include/openssl/ossl_typ.h:
 
 /usr/include/openssl/symhacks.h:
+
+zmq/zmqnotificationinterface.h:
